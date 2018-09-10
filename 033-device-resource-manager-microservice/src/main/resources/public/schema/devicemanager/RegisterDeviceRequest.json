@@ -1,0 +1,87 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"deviceRegistration": {
+			"type": "object",
+			"properties": {
+				"userName": {
+					"type": "string",
+					"maxLength": 200
+				},
+				"serialNumber": {
+					"type": "string",
+					"maxLength": 30
+				},
+				"deviceId": {
+					"type": "string",
+					"maxLength": 20
+				},
+				"ipAddress": {
+					"type": "string",
+					"maxLength": 20
+				},
+				"extIpAddress": {
+					"type": "string",
+					"maxLength": 20
+				},
+				"softwareVersion": {
+					"type": "string",
+					"maxLength": 50
+				},
+				"osName": {
+					"type": "string",
+					"maxLength": 30
+				},
+				"osVersion": {
+					"type": "string",
+					"maxLength": 30
+				},
+				"model": {
+					"type": "string",
+					"maxLength": 20
+				},
+				"vendor": {
+					"type": "string",
+					"maxLength": 30
+				},
+				"uiVersion": {
+					"type": "string",
+					"maxLength": 50
+				},
+				"deviceName": {
+					"type": "string",
+					"maxLength": 30
+				},
+				"drmId": {
+					"type": "string",
+					"maxLength": 30
+				},
+				"tvQualityInterest": {
+					"type": "string",
+					"maxLength": 30
+				},
+				"deviceType": {
+					"type": "string",
+					"maxLength": 30
+				},
+				"platform": {
+					"type": "string",
+					"maxLength": 30
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"userName",
+				"deviceId",
+				"serialNumber",
+				"model",
+				"vendor"
+			]
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"deviceRegistration"
+	]
+}

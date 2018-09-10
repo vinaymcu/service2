@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "resultCode": {
+      "type": "string"
+    },
+    "resultDescription": {
+      "type": "string"
+    },
+    "executionTime": {
+      "type": "integer"
+    },
+    "resultObj": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "crmAccountId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "errorMessage": {
+            "type": "string"
+          }
+        },
+        "required": [
+	  "crmAccountId",
+          "status"
+        ]
+      }
+    }
+  },
+  "required": [
+    "resultCode",
+    "resultDescription",
+    "executionTime"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"resultCode": {
+			"type": "string"
+		},
+		"resultDescription": {
+			"type": "string"
+		},
+		"executionTime": {
+			"type": "integer"
+		},
+		"resultObj": {
+			"type": "object",
+			"properties": {
+				"deviceProperties": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string",
+								"maxLength": 20
+							},
+							"value": {
+								"type": "string",
+								"maxLength": 200
+							}
+						},
+						"required": [
+							"name",
+							"value"
+						]
+					}
+				}
+			},
+			"required": [
+				"deviceProperties"
+			]
+		}
+	},
+	"required": [
+		"resultCode",
+		"resultDescription",
+		"executionTime"
+	]
+}

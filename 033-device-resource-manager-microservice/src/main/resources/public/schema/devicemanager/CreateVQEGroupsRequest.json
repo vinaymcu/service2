@@ -1,0 +1,360 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "retEnable": {
+      "type": "boolean"
+    },
+    "rccEnable": {
+      "type": "boolean"
+    },
+    "networkBufferSize": {
+      "type": "integer"
+    },
+    "maxRecvBwSD": {
+      "type": "integer"
+    },
+    "maxRecvBwHD": {
+      "type": "integer"
+    },
+    "maxRecvRccBwSD": {
+      "type": "integer"
+    },
+    "maxRecvRccBwHD": {
+      "type": "integer"
+    },
+    "groupAttributes": {
+      "type": "object",
+      "properties": {
+        "vqecEnable": {
+          "type": "boolean"
+        },
+        "vqecEnableUpdateType": {
+          "type": "string"
+        },
+        "jitterBuffSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20000
+        },
+        "jitterBuffSizeUpdateType": {
+          "type": "string"
+        },
+        "repairTriggerPointAbs": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 200
+        },
+        "repairTriggerPointAbsUpdateType": {
+          "type": "string"
+        },
+        "pakpoolSize": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 200000
+        },
+        "pakpoolSizeUpdateType": {
+          "type": "string"
+        },
+        "soRcvbuf": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "soRcvbufUpdateType": {
+          "type": "string"
+        },
+        "sigMode": {
+          "type": "string",
+          "enum": [
+            "nat",
+            "NAT",
+            "std",
+            "STD"
+          ]
+        },
+        "sigModeUpdateType": {
+          "type": "string"
+        },
+        "natBindingRefreshInterval": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "natBindingRefreshIntervalUpdateType": {
+          "type": "string"
+        },
+        "maxPaksize": {
+          "type": "integer",
+          "minimum": 1330,
+          "maximum": 10000
+        },
+        "maxPaksizeUpdateType": {
+          "type": "string"
+        },
+        "libcliTelnetPort": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "libcliTelnetPortUpdateType": {
+          "type": "string"
+        },
+        "outputPakqLimit": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 20000
+        },
+        "outputPakqLimitUpdateType": {
+          "type": "string"
+        },
+        "updateWindow": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "updateWindowUpdateType": {
+          "type": "string"
+        },
+        "updateIntervalMax": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 604800
+        },
+        "updateIntervalMaxUpdateType": {
+          "type": "string"
+        },
+        "errorRepairEnable": {
+          "type": "boolean"
+        },
+        "errorRepairEnableUpdateType": {
+          "type": "string"
+        },
+        "errorRepairPolicerEnable": {
+          "type": "boolean"
+        },
+        "errorRepairPolicerEnableUpdateType": {
+          "type": "string"
+        },
+        "errorRepairPolicerRate": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "errorRepairPolicerRateUpdateType": {
+          "type": "string"
+        },
+        "errorRepairPolicerBurst": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60000
+        },
+        "errorRepairPolicerBurstUpdateType": {
+          "type": "string"
+        },
+        "fecEnable": {
+          "type": "boolean"
+        },
+        "fecEnableUpdateType": {
+          "type": "string"
+        },
+        "rccEnable": {
+          "type": "boolean"
+        },
+        "rccEnableUpdateType": {
+          "type": "string"
+        },
+        "rccStartTimeout": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "rccStartTimeoutUpdateType": {
+          "type": "string"
+        },
+        "reorderDelayAbs": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 200
+        },
+        "reorderDelayAbsUpdateType": {
+          "type": "string"
+        },
+        "cliIfname": {
+          "type": "string"
+        },
+        "cliIfnameUpdateType": {
+          "type": "string"
+        },
+        "rtcpDscpValue": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        },
+        "rtcpDscpValueUpdateType": {
+          "type": "string"
+        },
+        "fastfillEnable": {
+          "type": "boolean"
+        },
+        "fastfillEnableUpdateType": {
+          "type": "string"
+        },
+        "extension": {
+          "type": "object",
+          "properties": {
+            "maxReceiveBandwidthSd": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000000
+            },
+            "maxReceiveBandwidthSdUpdateType": {
+              "type": "string"
+            },
+            "maxReceiveBandwidthHd": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000000
+            },
+            "maxReceiveBandwidthHdUpdateType": {
+              "type": "string"
+            },
+            "minHdStreamBitrate": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000000
+            },
+            "minHdStreamBitrateUpdateType": {
+              "type": "string"
+            },
+            "maxFastfill": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000000
+            },
+            "maxFastfillUpdateType": {
+              "type": "string"
+            },
+            "appDelay": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 60000
+            },
+            "appDelayUpdateType": {
+              "type": "string"
+            },
+            "srcIpFilterEnable": {
+              "type": "boolean"
+            },
+            "srcIpFilterEnableUpdateType": {
+              "type": "string"
+            },
+            "extension": {
+              "type": "object",
+              "properties": {
+                "maxReceiveBandwidthSdRcc": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000000
+                },
+                "maxReceiveBandwidthSdRccUpdateType": {
+                  "type": "string"
+                },
+                "maxReceiveBandwidthHdRcc": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000000
+                },
+                "maxReceiveBandwidthHdRccUpdateType": {
+                  "type": "string"
+                },
+                "qoeEnable": {
+                  "type": "boolean"
+                },
+                "qoeEnableUpdateType": {
+                  "type": "string"
+                },
+                "extension": {
+                  "type": "object",
+                  "properties": {
+                    "rccExtraIgmpIp": {
+                      "type": "string"
+                    },
+                    "rccExtraIgmpIpUpdateType": {
+                      "type": "string"
+                    },
+                    "extension": {
+                      "type": "object",
+                      "properties": {
+                        "logLevel": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 7
+                        },
+                        "logLevelUpdateType": {
+                          "type": "string"
+                        },
+                        "extension": {
+                          "type": "object",
+                          "properties": {
+                            "errorRepairSmartRequestEnable": {
+                              "type": "boolean"
+                            },
+                            "errorRepairSmartRequestEnableUpdateType": {
+                              "type": "string"
+                            },
+                            "errorRepairRepeatRequestEnable": {
+                              "type": "boolean"
+                            },
+                            "errorRepairRepeatRequestEnableUpdateType": {
+                              "type": "string"
+                            },
+                            "repairMinRoundTripTimeAbs": {
+                              "type": "integer",
+                              "minimum": 0,
+                              "maximum": 3000
+                            },
+                            "repairMinRoundTripTimeAbsUpdateType": {
+                              "type": "string"
+                            },
+                            "extension": {
+                              "type": "object",
+                              "properties": {
+                                "viewershipEnable": {
+                                  "type": "boolean"
+                                },
+                                "viewershipEnableUpdateType": {
+                                  "type": "string"
+                                },
+                                "extension": {
+                                  "type": "object",
+                                  "properties": {
+                                    "pcrRestampEnable": {
+                                      "type": "boolean"
+                                    },
+                                    "pcrRestampEnableUpdateType": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": []
+    }
+  },
+  "required": [
+    "retEnable",
+    "rccEnable"
+  ]
+}

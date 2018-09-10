@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="60">
+	<Appenders>
+
+		<Console name="ApplicationConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout>
+			      <Pattern>ts: %d{yyyy-MM-dd HH:mm:ss,SSS} | logLevel: %-5level | appId: %X{appId} | thread: (%t) | SID: %X{SID} | TN: %X{TN} | clientIp: %X{clientIp} | userId: %X{userId} | apiType: %X{apiType} | api: %X{api} | platform: %X{platform} | %cm %X{x-custom-log-fields}%n</Pattern>
+			</PatternLayout>
+        </Console>
+        
+		<!--START APPENDER SYNC FOR APPLICATION -->
+		<RollingFile name="ApplicationFileAppender"
+			fileName="${env:LOG_FILE_DIR:-/product/jboss/standalone/log}/deviceresourcemanager-ms.log"
+			filePattern="${env:LOG_FILE_DIR:-/product/jboss/standalone/log}/deviceresourcemanager-ms_%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<Pattern>ts: %d{yyyy-MM-dd HH:mm:ss,SSS} | logLevel: %-5level | appId: %X{appId} | thread: (%t) | SID: %X{SID} | TN: %X{TN} | clientIp: %X{clientIp} | userId: %X{userId} | apiType: %X{apiType} | api: %X{api} | platform: %X{platform} | %cm %X{x-custom-log-fields}%n</Pattern>
+			</PatternLayout>
+			<TimeBasedTriggeringPolicy />
+		</RollingFile>
+
+		<Async name="ApplicationAsync" blocking="false" bufferSize="50000">
+			<AppenderRef ref="${env:APPLICATION_LOG_APPENDER:-ApplicationFileAppender}" />
+		</Async>
+		<!--END APPENDER SYNC FOR APPLICATION -->
+	</Appenders>
+
+	<Loggers>
+
+		<Logger name="com.accenture.avs" level="${env:LOG_LEVEL:-INFO}" additivity="false">
+			<AppenderRef ref="ApplicationAsync" />
+		</Logger>
+
+		<Root level="${env:LOG_LEVEL:-INFO}">
+			<appender-ref ref="ApplicationAsync" />
+		</Root>
+	</Loggers>
+</Configuration>
+	
+		
+		
+		
+		

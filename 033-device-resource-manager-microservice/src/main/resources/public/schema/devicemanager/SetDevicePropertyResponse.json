@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "resultCode": {
+      "type": "string",
+      "description": "result code for the response"
+    },
+    "resultDescription": {
+      "type": "string",
+      "description": "Description corresponding to the result code"
+    },
+    "executionTime": {
+      "type": "integer",
+      "description": "GM Time in Milliseconds"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "resultCode",
+    "resultDescription",
+    "executionTime"
+  ]
+}

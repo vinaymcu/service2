@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "retEnable": {
+      "type": "boolean"
+    },
+    "rccEnable": {
+      "type": "boolean"
+    },
+    "networkBufferSize": {
+      "type": "integer"
+    },
+    "qoeControlBandwidth": {
+      "type": "integer"
+    },
+    "numSubIPTVDevices": {
+      "type": "integer"
+    },
+    "numSubIPTVVqeSDSTBs": {
+      "type": "integer"
+    },
+    "numSubIPTVVqeHDSTBs": {
+      "type": "integer"
+    },
+    "numSubIPTVQoeSDSTBs": {
+      "type": "integer"
+    },
+    "numSubIPTVQoeHDSTBs": {
+      "type": "integer"
+    },
+    "numSubIPTVQoeSTBs": {
+      "type": "integer"
+    },
+    "macAddress": {
+      "type": "string"
+    },
+    "vqeQuality": {
+      "type": "string"
+    },
+    "groupId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+   "groupId"
+  ]
+}

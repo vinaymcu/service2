@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"javaInterfaces": [
+		"java.io.Serializable"
+	],
+	"properties": {
+		"resultCode": {
+			"type": "string",
+			"description": "It will be valorized  in case of generic Error, that is in case the MS will not able to execute the requested interface, for example in case of the DataBase is down(ACN_300) or in case all entities in the request (or the single entity in case the request is not for list of entities) are successfully executed (ACN_200). In the other case it will be not present."
+		},
+		"resultDescription": {
+			"type": "string",
+			"description": "Description Error. Example:  300-GENERIC ERROR.  In the other case it will be not present."
+		},
+		"executionTime": {
+			"type": "integer",
+			"description": "GM Time in Milliseconds"
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"resultCode",
+		"resultDescription",
+		"executionTime"
+	]
+}

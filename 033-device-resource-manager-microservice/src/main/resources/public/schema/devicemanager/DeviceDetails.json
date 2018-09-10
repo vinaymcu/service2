@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "resultCode": {
+      "type": "string"
+    },
+    "resultDescription": {
+      "type": "string"
+    },
+    "executionTime": {
+      "type": "integer"
+    },
+    "resultObj": {
+      "type": "object",
+      "properties": {
+        "device": {
+          "type": "object",
+          "properties": {
+            "deviceId": {
+              "type": "string"
+            },
+            "serialNumber": {
+              "type": "string"
+            },
+            "ipAddress": {
+              "type": "string"
+            },
+            "extIPAddress": {
+              "type": "string"
+            },
+            "deviceName": {
+              "type": "string"
+            },
+            "softwareVersion": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string"
+            },
+            "vendor": {
+              "type": "string"
+            },
+		"deviceType": {
+		  "type": "string",
+		  "maxLength": 30
+		},
+		"platform": {
+		  "type": "string",
+		  "maxLength": 30
+		},
+            "uiVersion": {
+              "type": "string"
+            },
+            "assignmentStatus": {
+              "type": "string"
+            },
+            "lastUpdateTime": {
+              "type": "string"
+            },
+            "lastUpdateUserName": {
+              "type": "string"
+            },
+            "maxBandwidthUpdates": {
+              "type": "integer"
+            },
+            "tvQualityInterest": {
+              "type": "string"
+            },
+            "drmId": {
+              "type": "string"
+            },
+            "userName": {
+               "type": "string",
+               "maxLength": 100
+            },
+            "profile": {
+            	"type": "object",
+            	"properties": {
+					"name": {
+					  "type": "string",
+					  "maxLength": 20
+					},
+					"networkBandwidth": {
+					  "type": "integer"
+					},
+					"assignedVQEOverheadBW": {
+					  "type": "integer"
+					}
+				      },
+				      "required": [
+					"name",
+					"networkBandwidth",
+					"assignedVQEOverheadBW"
+				      ]
+				    }
+          },
+          "additionalProperties": false,
+          "required": [
+            "deviceId",
+            "assignmentStatus",
+            "lastUpdateTime",
+            "lastUpdateUserName",
+            "drmId",
+	    "deviceType",
+	    "platform"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "resultCode",
+    "resultDescription",
+    "executionTime"
+  ],
+  "additionalProperties": false
+}
